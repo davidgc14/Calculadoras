@@ -2,7 +2,7 @@ import math
 
 def disc_cubica(b0,b1,b2):
     print()
-    Dg = -4*(b2**3)*b0 + (b1*b2)**2 - 18*b0*b1*b2 - 4*(b1**3) - 27*(b0**2)
+    Dg = - 4*b0*(b2**3) + (b1*b2)**2 + 18*b0*b1*b2 - 4*(b1**3) - 27*(b0**2)
     print(f"g= x^3 + {b2}x^2 + {b1}x + {b0}")
     print()
     return Dg
@@ -38,12 +38,30 @@ if grado == 4:
 
     if math.trunc(resultado) == resultado:
         print(f"Es un cuadrado: {resultado}")
-        print("Df = A3 o V")
-        print()
+     
+        print("¿cuantas raices reales tiene g?:")
+        raices = int(input())
+        if raices == 0:
+            print("Df = A4")
+            print()
+        if raices == 3:
+            print("Df = V")
+            print()
+        else:
+            print("error")
     else:
         print("No es un cuadrado")
-        print("Dg = S4 o C o D")
-        print()
+
+        print("¿cuantas raices reales tiene g?:")
+        raices = int(input())
+        if raices == 1:
+            print("Df = C o D")
+            print()
+        elif raices == 0:
+            print("Df = S4")
+            print()
+        else:
+            print("error")
 
 
 if grado == 3:
