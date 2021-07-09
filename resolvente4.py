@@ -7,6 +7,9 @@ def disc_cubica(b0,b1,b2):
     print()
     return Dg
 
+
+
+
 print("grado: ")
 grado = int(input())
 
@@ -29,7 +32,21 @@ if grado == 4:
 
     Dg = disc_cubica(b0,b1,b2)
 
-else:
+    print(f"Discriminante: {Dg}")
+
+    resultado = math.sqrt(abs(Dg))
+
+    if math.trunc(resultado) == resultado:
+        print(f"Es un cuadrado: {resultado}")
+        print("Df = A3 o V")
+        print()
+    else:
+        print("No es un cuadrado")
+        print("Dg = S4 o C o D")
+        print()
+
+
+if grado == 3:
     print("a2=")
     a2 = int(input())
 
@@ -41,18 +58,22 @@ else:
 
     Dg = disc_cubica(a0,a1,a2)
 
+    print(f"Discriminante: {Dg}")
+
+    resultado = math.sqrt(abs(Dg))
+
+    if math.trunc(resultado) == resultado:
+        print(f"Es un cuadrado: {resultado}")
+        print("Dg = A3")
+        print()
+    else:
+        print("No es un cuadrado")
+        print("Dg = S3")
+        print()
 
 
-print(f"Discriminante: {Dg}")
 
-resultado = math.sqrt(abs(Dg))
 
-if math.trunc(resultado) == resultado:
-    print(f"Es un cuadrado: {resultado}")
-    print()
-else:
-    print("No es un cuadrado")
-    print()
 
 #print(type(resultado))
 
