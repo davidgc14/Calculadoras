@@ -13,6 +13,7 @@ def disc_cubica(b0,b1,b2):
 print("grado: ")
 grado = int(input())
 
+
 if grado == 4:
     print("a3=")
     a3 = int(input())
@@ -39,9 +40,10 @@ if grado == 4:
     if math.trunc(resultado) == resultado:
         print(f"Es un cuadrado: {resultado}")
      
-        print("¿cuantas raices reales tiene g?:")
+        print("¿cuantas raices reales tiene g? (irreducible grado 3):")
+        print("Si es reducible recurrir al estudio de la cuadrática")
         raices = int(input())
-        if raices == 0:
+        if raices == 1:
             print("Df = A4")
             print()
         if raices == 3:
